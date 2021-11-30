@@ -4,8 +4,7 @@
   "description": "To do list app",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
-    "build": "cd client && npm install && npm run build"
+    "start": "node server/index.js"
   },
   "engines": {
     "node": "v12.16.1"
