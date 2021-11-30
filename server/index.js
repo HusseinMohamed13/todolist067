@@ -1,5 +1,6 @@
 const express = require('express');
 var app = express();
+var cors = require('cors');
 const list = require('./models/List');
 const user = require('./models/User');
 const bodyParser = require('body-parser');
@@ -8,6 +9,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 var server = require("http").createServer(app);
 const port = process.env.PORT || 3001;
+
+app.use(cors())
 
 app.post('/api/register', async function (req, res) {
     console.log(req.query);
