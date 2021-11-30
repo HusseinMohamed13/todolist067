@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 var server = require("http").createServer(app);
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.post('/api/register', async function (req, res) {
     console.log(req.query);
